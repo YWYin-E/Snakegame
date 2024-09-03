@@ -121,22 +121,22 @@ def run():
                 running = False
             keys = pygame.key.get_pressed()
             for key in keys:
-                if keys[pygame.K_UP]:
+                if keys[pygame.K_w]:
                     # when UP is pressed but the snake is moving down, ignore the input
                     if snake_speed[1] == BLOCK_SIZE:
                         continue
                     snake_speed = [0, -BLOCK_SIZE]
-                if keys[pygame.K_DOWN]:
+                if keys[pygame.K_s]:
                     # when DOWN is pressed but the snake is moving up, ignore the input
                     if snake_speed[1] == -BLOCK_SIZE:
                         continue
                     snake_speed = [0, BLOCK_SIZE]
-                if keys[pygame.K_LEFT]:
+                if keys[pygame.K_a]:
                     # when LEFT is pressed but the snake is moving right, ignore the input
                     if snake_speed[0] == BLOCK_SIZE:
                         continue
                     snake_speed = [-BLOCK_SIZE, 0]
-                if keys[pygame.K_RIGHT]:
+                if keys[pygame.K_d]:
                     # when RIGHT is pressed but the snake is moving left, ignore the input
                     if snake_speed[0] == -BLOCK_SIZE:
                         continue
